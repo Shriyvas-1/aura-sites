@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lando Norris | The Racing Driver</title>
+    <style>
+        /* Variables */
+        :root {
+            --primary-color: #1E90FF;
+            --secondary-color: #FF4500;
+            --font-family: 'Segoe UI', -apple-system, system-ui, sans-serif;
+            --headline-font-size: 3rem;
+            --headline-weight: 700;
+            --body-font-size: 1rem;
+            --body-line-height: 1.5;
+            --container-max-width: 1000px;
+        }
+
+        /* General */
+        body {
+            font-family: var(--font-family);
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-weight: var(--headline-weight);
+            font-size: var(--headline-font-size);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: var(--body-font-size);
+            line-height: var(--body-line-height);
+            color: #333;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-max-width);
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        .nav {
+            background: #f0f0f0;
+            padding: 1rem;
+        }
+
+        .nav a {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: background 150ms ease-in-out;
+        }
+
+        .nav a:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Content */
+        .content {
+            padding: 2rem;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav container">
+        <a href="#header">Lando Norris</a>
+    </nav>
+
+    <div class="container content">
+        <main class="main" id="header">
+            <h1>Lando Norris</h1>
+            <p>The Racing Driver</p>
+        </main>
+
+        <section>
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio eget ipsum vestibulum blandit. Donec vel arcu auctor, faucibus purus vel, fringilla magna. Integer commodo, nulla vel ornare faucibus, mi tortor commodo enim, vel malesuada mi nisl sed eros.</p>
+        </section>
+
+        <section>
+            <h2>Career</h2>
+            <p>Donec vel arcu auctor, faucibus purus vel, fringilla magna. Integer commodo, nulla vel ornare faucibus, mi tortor commodo enim, vel malesuada mi nisl sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio eget ipsum vestibulum blandit.</p>
+        </section>
+
+        <section>
+            <h2>News</h2>
+            <p>Nullam vitae cursus erat, a mollis quam. Sed vel mi ut metus tristique laoreet. Nullam vel velit eros. Sed ut odio eget ipsum vestibulum blandit. Donec vel arcu auctor, faucibus purus vel, fringilla magna.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Lando Norris. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add smooth scrolling to links
+            var links = document.querySelectorAll('.nav a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var href = this.getAttribute('href');
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
